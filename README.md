@@ -1,7 +1,7 @@
 # DataCatchr
 
 ## Project Description
-What if you could own your data, and use it gain greater insight into your life? There is a gap that exists between spreadsheets . We are building the tools to let you track what is most uniquely important to you.
+What if you could own your data, and use it gain greater insight into your life? We are building the tools to let you track what is most uniquely important to you.
 
 ## Table of Contents 
 
