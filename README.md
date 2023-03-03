@@ -1,11 +1,14 @@
 # DataCatchr
 
 ## Project Description
-What if you could own your data, and use it gain greater insight into your life? We are building the tools to let you track what is most uniquely important to you.
+If you could wave a magic wand and get insight into any aspect of your life, what would you choose? We are building the tools to let you track what is most important uniquely to you, and use it gain greater insight into your life.
 
 ## Table of Contents 
-
-
+#### I. How To Install
+#### II. How To Use
+#### III. How To Contribute
+#### IV. Credits
+#### V. License
 
 ## How to Install and Run the Project
 Right now, everything is in this repo.
