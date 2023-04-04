@@ -10,3 +10,5 @@ Werkzeug==2.2.2
 zipp==3.12.1
 pandas
 plotly
+flask-assets
+

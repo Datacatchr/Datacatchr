@@ -26,3 +26,9 @@ class DevConfig(Config):
     DEBUG = True
     TESTING = True
     DATABASE_URI = environ.get('DEV_DATABASE_URI')
+
+    """Flask configuration."""
+
+LESS_BIN = '/usr/local/bin/lessc'
+ASSETS_DEBUG = False
+ASSETS_AUTO_BUILD = True
