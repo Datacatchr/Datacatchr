@@ -52,16 +52,16 @@ DONE | WORKING | NEEDS WORK | FRAMED | DESIGNED | IDEA | IDEATING
 5. Add functionality to let people sell their apps and data viz?
 	
 ### 4. Data rollup that lets people import their data from other sources and that pulls data from public sources==
-	1. Create a way to use AI to autogenerate charts, and to automatically generate the code to connect to the database table 
-	2. Create a GraphDB to start connecting data
-	3. Create workflows to automate the process of pulling 
-	4. Start creating a crypto for this (Also create a DAO?)
+1. Create a way to use AI to autogenerate charts, and to automatically generate the code to connect to the database table 
+2. Create a GraphDB to start connecting data
+3. Create workflows to automate the process of pulling 
+4. Start creating a crypto for this (Also create a DAO?)
 	
 ### 5. Give people the option to store their data on Filecoin and personally own their own data
-	1. __
+1. __
 	
 ### 6. Create ways for people to moetize their data; transition to "Crypto First"
-	1. __
+1. __
 
 
 ## How to Contribute to the Project
