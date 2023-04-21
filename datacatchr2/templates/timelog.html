@@ -1,0 +1,223 @@
+{% extends "layout.html" %} 
+  {% block content %} 
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!----Tailwind  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-slate-200">
+    <div class="flex-col items-center">
+      <script src="" async defer></script>
+      <!-- <button type="button" class="bg-slate-500 text-white w-32 h-5 mt-12 rounded-xl text-center" type="button" id="dashbutton">Dashboard</button>
+      <script>
+        document.getElementById("dashbutton").onclick = function () {
+            location.href = "/dashboard";
+        };</script> -->
+        <br>
+      <h1 class="text-3xl uppercase mt-12 font-bold inline-block">Focused Work Log</h1>
+      <div class="section mt-6 w-96 ml-4  p-3 shadow-md bg-slate-50">
+        <form method="post">
+        <h3 class="underline">The ONE Thing</h3>
+        <label for="the-one-thing" class="mt-3"
+          >What is the ONE thing you are planning to work on right now?</label
+        >
+        <br />
+
+        <input
+          type="text"
+          class="h-20 ml-2 mt-4 w-80 align-top"
+          id="the-one-thing"
+          name="the-one-thing"
+          placeholder="text here"
+      
+        />
+        <br /><br />
+        <div x-dat="{open: false}">
+          <button type="button"
+            class="bg-slate-500 text-white px-4 py-02 rounded-xl">
+            Speech To Text
+          </button>
+        </div>
+      </div>
+
+      <div class="section w-96 mt-6 ml-4 p-3 shadow-md bg-slate-50">
+        <h3 class="underline">Area</h3>
+        <label for="area-dd">What area of life does this work develop?</label>
+        <br />
+        <select name="area-dd" id="area-dd">
+          <br />
+          <option value="">--Please choose an option--</option>
+          <option value="health">Health</option>
+          <option value="financial">Finances</option>
+          <option value="spiritual">Spirituality</option>
+          <option value="mental">Mentality</option>
+          <option value="emotional">Emotional Well-Being</option>
+        </select>
+      </div>
+      <div class="section w-96 mt-6 ml-4 p-3 shadow-md bg-slate-50">
+        <h3>Topic</h3>
+        <label for="topic-dd">What specifically are you working on?</label>
+        <br />
+        <select name="topic-dd" id="topic-dd">
+          <option value="">--Please choose an option--</option>
+          <option value="income">Income</option>
+          <option value="investments">Investments</option>
+          <option value="career">Career</option>
+          <option value="personal-finance">Personal Finance</option>
+          <option value="credit">Credit</option>
+          <option value="coaching">Coaching</option>
+        </select>
+      </div>
+      <div class="section w-96 mt-6 ml-4 p-3 shadow-md bg-slate-50">
+        <h3 class="underline">Duration</h3>
+        <div>
+          <label for="start-time"> Begin: </label>
+          <div class="inline-block" id="start-time" name="start-time">--</div>
+          <input type="hidden" id="hidden-start-time" name="hidden-start-time" value="0">
+          <label for="end-time"> End: </label>
+          <div class="inline-block" id="end-time" name="end-time">--</div>
+          <input type="hidden" id="hidden-end-time" name="hidden-end-time" value="0">
+
+          <p><span id="seconds" name="seconds">00</span>.<span id="tens" name="tens">00</span><span> seconds</span></p>
+                    <input type="hidden" id="hidden-seconds" name="hidden-seconds" value="0">
+                    <input type="hidden" id="hidden-tens-secs" name="hidden-tens-secs" value="0">
+
+
+          <button class="bg-slate-500 text-white w-16 h-5 mt-2 rounded-xl text-center" type="button" id="button-start">Start</button>
+          <button class="bg-slate-500 text-white w-16 h-5 rounded-xl" type="button" id="button-stop">Stop</button>
+          <button class="bg-slate-500 text-white w-16 h-5 rounded-xl " type="button" id="button-reset">Reset</button>
+      
+          <script>
+            window.onload = function () {
+              var seconds = 00;
+              var tens = 00;
+              var appendBegin = document.getElementById("start-time");
+              var appendEnd = document.getElementById("end-time");
+              var appendTens = document.getElementById("tens");
+              var appendSeconds = document.getElementById("seconds");
+              var buttonStart = document.getElementById("button-start");
+              var buttonStop = document.getElementById("button-stop");
+              var buttonReset = document.getElementById("button-reset");
+              var Interval;
+              buttonStart.onclick = function () {
+                clearInterval(Interval);
+                Interval = setInterval(startTimer, 10);
+                appendBegin.innerHTML = Date.now();
+                document.getElementById("hidden-start-time").value = Date.now();
+              };
+
+              buttonStop.onclick = function () {
+                clearInterval(Interval);
+                appendEnd.innerHTML = Date.now();
+                document.getElementById("hidden-end-time").value = Date.now();
+                document.getElementById("hidden-seconds").value = seconds;
+                document.getElementById("hidden-tens-secs").value = tens;
+              };
+
+              buttonReset.onclick = function () {
+                clearInterval(Interval);
+                tens = "00";
+                seconds = "00";
+                document.getElementById("hidden-seconds").value = "00";
+                document.getElementById("hidden-tens-secs").value = "00";
+                document.getElementById("hidden-start-time").value = null;
+                document.getElementById("hidden-end-time").value = null;
+                appendBegin.innerHTML = null;
+                appendEnd.innerHTML = null;
+
+
+                appendTens.innerHTML = tens;
+                appendSeconds.innerHTML = seconds;
+              };
+
+              function startTimer() {
+                tens++;
+
+                if (tens < 9) {
+                  appendTens.innerHTML = "0" + tens;
+                }
+
+                if (tens > 9) {
+                  appendTens.innerHTML = tens;
+                }
+
+                if (tens > 99) {
+                  console.log("seconds");
+                  seconds++;
+                  appendSeconds.innerHTML = "0" + seconds;
+                  tens = 0;
+                  appendTens.innerHTML = "0" + 0;
+                }
+
+                if (seconds > 9) {
+                  appendSeconds.innerHTML = seconds;
+                }
+              }
+            };
+          </script>
+        </div>
+
+      </div>
+      <div class="section w-96 mt-6 ml-4 p-3 shadow-md bg-slate-50">
+        <h3 class="underline">Focus</h3>
+        <label for="focus-dd">How focused were you?</label>
+        <br />
+        <select id="focus-dd" name="focus-dd">
+          <option value="">--Please choose an option--</option>
+          <option value="high">Very focused; no distractions</option>
+          <option value="medium">Somewhat focused; some distractions</option>
+          <option value="Low">Distracted</option>
+        </select>
+      </div>
+      <div class="section w-96 mt-6 ml-4 p-3 shadow-md bg-slate-50">
+        <h3 class="underline">Work Description</h3>
+        <label for="work-description"
+          >How did you actually spend your time?</label>
+
+          <input
+          type="text"
+          class="h-20 ml-2 mt-4 w-80 text-left"
+          id="work-description"
+          name="work-description"
+          placeholder="text here"
+      
+        />
+      
+        <br /><br />
+      
+        <button type="button"
+          class="bg-slate-500 text-white px-4 py-02 rounded-xl" placeholder="text here"
+        >Speech To Text</button>
+      </div>
+      <br />
+      <br />
+      <br />
+    </div>
+    <div>
+      <button class="bg-slate-500 text-white w-96 h-24 rounded-xl mb-4 ml-4" type="submit"> Submit</button>
+     
+    </div>
+  </form>
+  </body>
+  <footer>
+    <p class="text-center"> Copyright {{ year }}. Built by Thomas Mulhern.</p>
+  </footer>
+</html>
+{% endblock content %}

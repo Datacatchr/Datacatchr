@@ -1,0 +1,26 @@
+    <!-- This only works if the tool info is being sent to the page in the datacatchr2.py library function-->
+
+{% extends "layout.html" %} 
+  {% block content %} 
+  <h5> This is a library of publicly available tools. There will be an indicator to distinguish free tools from paid 3rd party tools.</h5>
+{% for tool in tools %}
+      <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <small class="text-muted">Built by {{ tool.suggested_by }} ADD IMAGE AND LINK TO USER ACCOUNT</small>
+            <small></small>
+          </div>
+          <h2><a class="article-title" href="#">{{ tool.name }}</a></h2>
+          <p class="article-content">{{ tool.description }}</p>
+          <small class="text-muted" href="#"> &#60;3 This Tool</small>
+          <div></div>
+          <small class="text-muted" > Downloads: 3</small>
+          
+        </div>
+      </article>
+    {% endfor %}  
+
+  {% endblock content %}
+  <footer>
+    <p class="text-center"> Copyright {{ year }}. Built by Thomas Mulhern.</p>
+  </footer>

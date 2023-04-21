@@ -1,0 +1,24 @@
+
+{% extends "layout.html" %} {% block content %}
+<h1>Data</h1>
+<p> This is where you will be able to see your tables of data, edit them like a spreadsheet, and download them</p>
+<h5>Time Log</h5>
+<table class="table">
+  <tr class="table__header">
+    {% for header in headings %}
+      <th class="table__cell">{{ header }}</th>
+    {% endfor %}
+  </tr>
+  
+    {% for row in table_data %}
+    <tr class="table__row">
+    {% for cell in row %}
+       <td class="table__cell"> {{ cell }}</td>
+      {% endfor %}
+    {% endfor %}
+  </tr>
+</table>
+{% endblock content %}
+<footer>
+    <p class="text-center"> Copyright {{ year }}. Built by Thomas Mulhern.</p>
+  </footer>

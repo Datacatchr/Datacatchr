@@ -1,5 +1,5 @@
 click==8.1.3
-Flask==2.0.3
+Flask
 gunicorn==20.0.4
 importlib-metadata==6.0.0
 itsdangerous==2.1.2
@@ -9,6 +9,10 @@ typing-extensions==4.4.0
 Werkzeug==2.2.2
 zipp==3.12.1
 pandas
+flask_sqlalchemy
 plotly
-flask-assets
-
+openpyxl
+flask_wtf
+flask_bootstrap
+flask_wtf
+openpyxl
