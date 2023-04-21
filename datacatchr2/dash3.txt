@@ -1,0 +1,4 @@
+  {% endblock content %}
+<footer>
+    <p class="text-center"> Copyright {{ year }}. Built by Thomas Mulhern.</p>
+  </footer>

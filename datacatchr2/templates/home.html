@@ -1,0 +1,26 @@
+{% extends "layout.html" %} 
+  {% block content %} 
+{% for tool in tools %}
+      <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">Add/Remove</a>
+            <small class="text-muted">Suggested by {{ tool.suggested_by }}</small>
+          </div>
+          {% if tool.name == 'Time Log' %}
+          <h2><a class="article-title" href="{{ url_for('timelog') }}">{{ tool.name }}</a></h2>
+          {% else %}
+          <h2><a class="article-title" href="#">{{ tool.name }}</a></h2>
+          {% endif %}
+          <p class="article-content">{{ tool.description }}</p>
+          <small class="text-muted" href="#"> Like This Tool</small>
+        </div>
+      </article>
+    {% endfor %}  
+
+  {% endblock content %}
+
+
+  <footer>
+    <p class="text-center"> Copyright {{ year }}. Built by Thomas Mulhern.</p>
+  </footer>
